@@ -5,10 +5,19 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgba(0, 0, 0, 0.91);
+}
+
 h1 {
+  color: white;
   font-size: 4rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 2.5rem;
+}
+
+textarea {
+    box-shadow: rgba(255, 255, 255, 0.621) 0px 3px 8px;
 }
 
 textarea::placeholder {
@@ -25,6 +34,7 @@ input {
   width: 40rem;
   align-items: center;
   padding: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.621) 0px 3px 8px;
 }
 
 .App {
@@ -38,6 +48,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(255, 255, 255, 0.621) 0px 3px 8px;
 }
 
 /* Set the size of the keyboard itself */
@@ -91,6 +102,21 @@ input {
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   animation: popUp 0.4s ease-in-out;
+}
+
+.hg-button-esc,
+.hg-button-backspace {
+  width: 5rem;
+}
+
+.hg-button-capslock,
+.hg-button-enter {
+  width: 6rem;
+}
+
+.hg-button-shiftleft,
+.hg-button-shiftright {
+  width: 7rem;
 }
 
 @keyframes popUp {

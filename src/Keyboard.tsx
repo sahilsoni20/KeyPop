@@ -75,8 +75,7 @@ export const KeyPop = () => {
     setInput(inputValue);
     keyboard.setInput(inputValue);
   };
-  
-  
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let keyboard: any;
 
   return (
@@ -85,6 +84,14 @@ export const KeyPop = () => {
         value={input}
         placeholder={"Tap on the virtual keyboard to start"}
         onChange={handleChangeInput}
+        style={{
+          marginBottom: "2rem",
+          height: "5rem",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "1rem"
+        }}
       />
       <div className={"keyboardContainer"}>
         <Keyboard
