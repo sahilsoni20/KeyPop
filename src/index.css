@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 2.5rem;
+}
+
+textarea::placeholder {
+  padding: 0.1rem;
+  font-size: 1.2rem;
+  box-sizing: content-box;
+}
+
+input {
+  position: relative;
+  left: 13rem;
+  margin-bottom: 2rem;
+  height: 5rem;
+  width: 40rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Set the size of the keyboard itself */
+.simple-keyboard-main {
+  width: 100%;
+  max-width: 1200px; /* You can adjust the max-width if needed */
+  height: auto;
+  /* background-color: black; */
+}
+
+/* Make sure keys are properly aligned */
+.hg-button {
+  padding: 1rem; /* Increase padding for larger buttons */
+  font-size: 1.2rem; /* Increase font size for better visibility */
+  border: 1px solid #ccc;
+  margin: 5px; /* Add spacing between keys */
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+/* Add hover effects */
+.hg-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Styling for special keys */
+.hg-button[data-skbtn="{enter}"],
+.hg-button[data-skbtn="{shiftleft}"],
+.hg-button[data-skbtn="{shiftright}"],
+.hg-button[data-skbtn="{capslock}"],
+.hg-button[data-skbtn="{backspace}"],
+.hg-button[data-skbtn="{space}"] {
+  background-color: #d1d1d1;
+  font-weight: bold;
+}
+
+.hg-button[data-skbtn="{space}"] {
+  width: 25em;
+}
+
+/* Styling for key pop-up effect */
+.key-pop {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  animation: popUp 0.4s ease-in-out;
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .hg-button {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  .simple-keyboard-main {
+    max-width: 95%;
+  }
+}
